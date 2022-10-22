@@ -45,9 +45,13 @@ ul {
   max-width: 900px;
   margin: 50px auto;
 }
+.weekly-forecast {
+    text-align: center;
+}
 
 .overview-icon{
   text-align: center;
+  justify-content: center;
 }
 
 .rain-picture {
