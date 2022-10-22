@@ -27,18 +27,19 @@
       <div class="new-weather-app-wrapper">
         <div class="new-weather-app">
           <div class="row">
-              <div class="col-10">
-                <form>
+              <div class="col-8">
+                <form id="search-form">
                 <input
                   type="search"
                   placeholder="Enter a city"
                   class="form-control"
-                  id="input"
+                  id="city-input"
                   autocomplete="off"
                 />
               </div>
-              <div class="col-2">
+              <div class="col-4">
                 <input type="submit" value="Enter" class="btn btn-light" />
+                <input type="button" value="Current Position" class="btn btn-light" id="currentPosition" />
               </div>
             </form>
             <h1 id="city">Chicago</h1>
@@ -51,7 +52,7 @@
             <br />
             <div class="row">
               <div>
-            <div class="overview-icon" id="overviewIcon">
+            <div class="overview-icon" id="icon">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGT0oFUEgXsO49POVbXjDwXrlvzUBRs0yoNA&usqp=CAU"
                     alt="weather-overview">
             </div>
@@ -62,13 +63,12 @@
                 <li id="description">Clear</li>
                 <li>Humidity: <span id="humidity"></span>%</li>
                 <li>Feels Like: <span id="feelsLike"></span>˚F</li>
-                <li>Wind Speed: <span id="wind"></span>mpH</li>
+                <li>Wind Speed: <span id="wind"></span> mpH</li>
               </ul>
             </div>
             <br />
             <br />
             <br />
-
             <div class="weekly-weather" id="forecast"></div>
             </div>
           </div>
