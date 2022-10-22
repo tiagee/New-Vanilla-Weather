@@ -44,6 +44,11 @@ function handleSubmit(event) {
 let form = document.querySelector("form");
 form.addEventListener("submit", handleSubmit);
 
+function displayForecast(){
+    let weatherForecast = document.querySelector("#weatherForecast");
+    weatherForecastElement.innerHTML ="weatherForecast"; 
+}
+
 function displayTemperature(response) {
   console.log(response.data);
   let cityElement = document.querySelector("#city");
@@ -100,3 +105,6 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsiusLink");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+
+displayForecast();
