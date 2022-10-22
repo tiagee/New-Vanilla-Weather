@@ -33,14 +33,14 @@ function displayForecast(response) {
 
   let forecastElement = document.querySelector("#forecast");
 
-  let forecastHTML = `<div class="overviewIcon">`;
-  days.forEach(function (forecastDay, index) {
+  let forecastHTML = `<div class="row">`;
+  forecast.forEach(function (forecastDay, index) {
     if (index < 6){
     forecastHTML =
       forecastHTML +
       `
-      <div class="col weekly-forecast">
-        <div class="weekly-weather-date">${formatDay(forecastDay.dt)}</div>
+      <div class="col-2">
+        <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
         <img
           src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
           alt=""
@@ -72,6 +72,7 @@ function displayTemperature(response) {
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
+  let feelsLikeElement= document.querySelector("#feelsLike");
   let iconElement = document.querySelector("#icon");
 
   farhenheitTemperature = response.data.main.temp;
@@ -82,6 +83,7 @@ function displayTemperature(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  feelsLikeElement.innerHTML = Math.round(response.data.main.feels_like);
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -92,7 +94,7 @@ function displayTemperature(response) {
 }
 function search(city) {
   let apiKey = "b33c274bbf1108e005159bce13f6759c";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(displayTemperature);
 }
 
@@ -101,8 +103,5 @@ function handleSubmit(event) {
   let cityInputElement = document.querySelector("#city-input");
   search(cityInputElement.value);
 }
-
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", handleSubmit);
 
 search("Chicago");
