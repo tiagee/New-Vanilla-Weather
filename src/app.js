@@ -34,6 +34,7 @@ function search(city) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(displayTemperature);
 }
+
 function handleSubmit(event) {
   event.preventDefault();
   let inputElement = document.querySelector("#input");
@@ -44,6 +45,7 @@ let form = document.querySelector("form");
 form.addEventListener("submit", handleSubmit);
 
 function displayTemperature(response) {
+  console.log(response.data);
   let cityElement = document.querySelector("#city");
   cityElement.innerHTML = response.data.name;
 
@@ -92,9 +94,6 @@ function displayFahrenheitTemperature(event) {
   let temperatureElement = document.querySelector("#currentTemperature");
   temperatureElement.innerHTML = Math.round(temp);
 }
-
-// fahrenheitLink
-// celsiusLink
 
 let fahrenheitLink = document.querySelector("#fahrenheitLink");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);

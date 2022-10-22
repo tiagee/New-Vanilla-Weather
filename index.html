@@ -27,41 +27,39 @@
       <div class="new-weather-app-wrapper">
         <div class="new-weather-app">
           <div class="row">
-            <form>
-              <div class="col-8">
+              <div class="col-10">
+                <form>
                 <input
                   type="search"
                   placeholder="Enter a city"
                   class="form-control"
                   id="input"
+                  autocomplete="off"
                 />
               </div>
-              <div class="col-4">
-                <input type="submit" value="Enter" />
-                <input type="submit" value="Current Location" />
+              <div class="col-2">
+                <input type="submit" value="Enter" class="btn btn-light" />
               </div>
             </form>
             <h1 id="city">Chicago</h1>
             <h3 id="date">Sunday 17:48</h3>
             <h2>
-              <span id="currentTemperature"></span>
+              <span id="currentTemperature"> 50</span>
               <a href="#" class="daily-temp units" id="fahrenheitLink"> °F</a
               >|<a href="#" class="daily-temp units" id="celsiusLink">°C</a>
             </h2>
             <br />
             <div class="row">
               <div>
-                <span
-                  class="material-symbols-outlined overview-picture"
-                  id="overviewIcon"
-                >
-                  cloud
-                </span>
+            <div class="overview-icon" id="overviewIcon">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGT0oFUEgXsO49POVbXjDwXrlvzUBRs0yoNA&usqp=CAU"
+                    alt="weather-overview">
+            </div>
               </div>
             </div>
             <div>
               <ul>
-                <li id="description"></li>
+                <li id="description">Clear</li>
                 <li>Humidity: <span id="humidity"></span>%</li>
                 <li>Feels Like: <span id="feelsLike"></span>˚F</li>
                 <li>Wind Speed: <span id="wind"></span>mpH</li>
