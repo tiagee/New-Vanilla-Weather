@@ -1,10 +1,21 @@
 body {
   background: #f5e4d7;
 }
+a:active {color: #73877b;}
+
 a:link {
   text-decoration: none;
   color: #73877b;
 }
+a:visited {
+    color:#73877b;
+}
+
+form {
+    display: flex;
+    text-align: center;
+}
+
 h1 {
   text-align: center;
 }
@@ -21,14 +32,16 @@ li {
   font-size: 20px;
   text-transform: capitalize;
 }
+small {
+    text-align: center;
+    display: block;
+}
+
 ul {
   list-style: none;
   text-align: center;
 }
-form{ 
-    display: flex;
-    text-align: center;
-}
+
 .day-heading {
   font-size: 20px;
 }
