@@ -100,8 +100,26 @@ function search(city) {
 
 function handleSubmit(event) {
   event.preventDefault();
-  let cityInputElement = document.querySelector("#city-input");
-  search(cityInputElement.value);
+  let inputElement = document.querySelector("#input");
+  search(inputElement.value);
 }
+
+let form = document.querySelector("#search");
+form.addEventListener("submit", handleSubmit);
+
+function searchCurrentLocation(position) {
+  let apiKey = "6782253072f7d90462731a624097fc54";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=imperial`;
+
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchCurrentLocation);
+}
+let currentLocationButton = document.querySelector("#currentLocation");
+currentLocationButton.addEventListener("click", getCurrentLocation);
+
 
 search("Chicago");

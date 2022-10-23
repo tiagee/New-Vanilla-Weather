@@ -20,13 +20,13 @@
         <div class="new-weather-app-wrapper">
             <div class="new-weather-app">
                 <div class="row">
-                    <form>
+                    <form class= "search-form" id="search">
                         <div class="col-8">
                             <input type="search" placeholder="Enter a city" class="form-control" id="input" />
                         </div>
                         <div class="col-4">
-                            <input type="submit" value="Enter" />
-                            <input type="button" value="Current Location" />
+                        <input type="submit" value="Enter" autocomplete="off" class= "btn btn-light" />
+                        <input type="button" value="Current Location" id="currentLocation" class= "btn btn-light"/>
                             </div>
                     </form>
                     <h1 id="city">Chicago</h1>

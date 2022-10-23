@@ -25,7 +25,10 @@ ul {
   list-style: none;
   text-align: center;
 }
-
+form{ 
+    display: flex;
+    text-align: center;
+}
 .day-heading {
   font-size: 20px;
 }
@@ -45,10 +48,7 @@ ul {
   max-width: 900px;
   margin: 50px auto;
 }
-.search-form {
-    display: inline;
-    text-align: center;
-}
+
 
 .weather-forecast {
     text-align: center;
