@@ -45,7 +45,12 @@ ul {
   max-width: 900px;
   margin: 50px auto;
 }
-.weekly-forecast {
+.search-form {
+    display: inline;
+    text-align: center;
+}
+
+.weather-forecast {
     text-align: center;
 }
 
