@@ -1,16 +1,16 @@
 body {
   background: #f5e4d7;
+  font-size: smaller;
 }
 a:active {color: black;}
 
+a:visited {
+    color:#73877b;;
+}
 a:link {
   text-decoration: none;
-  color: black;
+  color: #73877b;
 }
-a:visited {
-    color:black;
-}
-
 form {
     display: flex;
     text-align: center;
@@ -61,7 +61,7 @@ ul {
   max-width: 900px;
   margin: 50px auto;
 }
-.units {color: #73877b;}
+
 
 .weather-forecast {
     text-align: center;
