@@ -1,14 +1,14 @@
 body {
-  background: #f5e4d7;
+  background: black;
 }
-a:active {color: #73877b;}
+a:active {color: black;}
 
 a:link {
   text-decoration: none;
-  color: #73877b;
+  color: black;
 }
 a:visited {
-    color:#73877b;
+    color:black;
 }
 
 form {
