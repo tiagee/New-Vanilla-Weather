@@ -61,7 +61,7 @@ ul {
   max-width: 900px;
   margin: 50px auto;
 }
-
+.units {color: #73877b;}
 
 .weather-forecast {
     text-align: center;
